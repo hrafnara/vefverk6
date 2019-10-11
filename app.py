@@ -8,3 +8,7 @@ app = Flask(__name__)
 
 with urllib.request.urlopen("http://apis.is/petrol") as url:
     gogn = json.loads(url.read().decode)
+
+@app.route("/")
+def()
+    return render_template("home.html")

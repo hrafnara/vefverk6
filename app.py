@@ -19,10 +19,14 @@ def minPetrol(
     for i in 1st:
         if i['bensin95'] is not None:
             pass
-
 )
 #-----------------------routes--------------------------------------
 
 @app.route("/")
 def index()
     return render_template("index.tpl",gogn =gogn, minP=minPetrol(), minD=minDiesel)
+
+
+
+if __name__ == "__main__":
+        app.run(debug=True)

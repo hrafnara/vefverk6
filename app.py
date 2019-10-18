@@ -2,7 +2,7 @@ from flask import Flask, flash, redirect, render_template, request, json
 import os
 import urllib.request
 from jinja2 import ext
-from Datatime import datatime
+from datatime import datatime
 
 app = Flask(__name__)
 
@@ -11,22 +11,22 @@ with urllib.request.urlopen("http://apis.is/petrol") as url:
 
 
 
-def minPetrol(
+def minPetrol():
     minPetrol = 1000
     company = None
     adress = None
-    1st = gogn['result']
-    for i in 1st:
+    lst = gogn['result']
+    for i in lst:
         if i['bensin95'] is not None:
             pass
-)
+
 #-----------------------routes--------------------------------------
 
 @app.route("/")
-def index()
+def index():
     return render_template("index.tpl",gogn =gogn, minP=minPetrol(), minD=minDiesel)
 
 
-
+#-------------------run---------------------------------------------------
 if __name__ == "__main__":
-        app.run(debug=True)
+    app.run(debug=True)

@@ -2,12 +2,13 @@ from flask import Flask, flash, redirect, render_template, request, json
 import os
 import urllib.request
 from jinja2 import ext
-from datatime import datatime
+from datetime import datetime
 
 app = Flask(__name__)
 
 with urllib.request.urlopen("http://apis.is/petrol") as url:
-    gogn = json.loads(url.read().decode)
+    gogn = json.loads(url.read().decode())
+#    print(gogn)
 
 
 
@@ -15,10 +16,12 @@ def minPetrol():
     minPetrol = 1000
     company = None
     adress = None
-    lst = gogn['result']
+    lst = gogn['results']
     for i in lst:
         if i['bensin95'] is not None:
             pass
+def minDiesel():
+    pass
 
 #-----------------------routes--------------------------------------
 

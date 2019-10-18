@@ -9,6 +9,18 @@ app = Flask(__name__)
 with urllib.request.urlopen("http://apis.is/petrol") as url:
     gogn = json.loads(url.read().decode)
 
+
+
+def minPetrol(
+    minPetrol = 1000
+    company = None
+    adress = None
+    1st = gogn['result']
+    for i in 1st:
+        if i['bensin95'] is not None:
+            pass
+
+)
 #-----------------------routes--------------------------------------
 
 @app.route("/")

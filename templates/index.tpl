@@ -9,4 +9,8 @@
             <div class='box'>
                 <a href="/company/{{item.company}}">
                     <img scr="static/{{ item.company }}.png" title="{{ item.company }}"
-  
+                <\a>
+            <\div>
+        {% endif %}
+    {% endfor %}
+<\div>

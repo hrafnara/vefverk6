@@ -10,24 +10,25 @@ with urllib.request.urlopen("http://apis.is/petrol") as url:
     gogn = json.loads(url.read().decode())
 #    print(gogn)
 
-
+app.jinja_env.add_extension(ext.do)
 
 def minPetrol():
-    minPetrol = 1000
-    company = None
-    adress = None
-    lst = gogn['results']
-    for i in lst:
-        if i['bensin95'] is not None:
-            pass
+    return 100
+#    minPetrol = 1000
+#    company = None
+#    adress = None
+#    lst = gogn['results']
+#    for i in lst:
+#        if i['bensin95'] is not None:
+#            pass
 def minDiesel():
-    pass
+    return 1000
 
 #-----------------------routes--------------------------------------
 
 @app.route("/")
 def index():
-    return render_template("index.tpl",gogn =gogn, minP=minPetrol(), minD=minDiesel)
+    return render_template("index.tpl",gogn =gogn, minP=minPetrol(), minD=minDiesel())
 
 
 #-------------------run---------------------------------------------------

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Eldsneytisverð - miðannarverkefni - json{% endblock %}
+{% block content %}
+
+<div class="wrapper">
+    {% for i in oneco %}
+            <div class='box'>
+                <a href="/company/{{i}}">
+                    <p>{{ i }}</p>
+
+                    <img src="/static/{{ i }}.png" title="{{ i }}">
+                </a>
+            </div>
+    {% endfor %}
+</div>
+
+<div class= "wrapper">   
+<h1 class = "box">{{ minD[1] }} er með ódýrasta dísel verðið: {{ minD[0]}} </h1>
+<h1 class = "box">{{ minP[1] }} er með ódýrasta petrol verðið: {{ minP[0]}} </h1>
+</div>
+{% endblock %}

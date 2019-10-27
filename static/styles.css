@@ -1,6 +1,6 @@
 body{
 	font-family: sans-serif;
-	background:silver;
+	background:gold;
 	margin: 0 1em 1em 1em;
 }
 /*https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout*/
@@ -8,6 +8,11 @@ body{
 	display: grid;   
 	grid-template-columns: 1fr;   
 	grid-gap:1em;
+}
+
+
+a .box{
+    background: cadetblue;
 }
 .box{
 	border:0.75px solid;
@@ -51,8 +56,11 @@ nav a:hover,
 a {
 	color:#333;
 }
-h1, h2, h3, h5 {
+h1, h2, h3, h5, ul{
 	text-align: center;
+}
+li{
+    margin: 1em;
 }
 table {
     font-family: arial, sans-serif;
@@ -70,16 +78,10 @@ tr:nth-child(even) {
 }
 header,
 footer {
-	margin-bottom:2em;
+    margin-bottom:2em;
+    background: darkgoldenrod;
 }
-.kort {
-	max-width: 25em;
-	margin: 1em auto;
-	padding: 0 1em;
-	border: 1px solid;
-	background-color: #efff00;
-	border-radius: 5px;
-}
+
 @media screen and (min-width:37.5em) {
 	body{
 		max-width: 48em;

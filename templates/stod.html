@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %} {{ nafn }} {% endblock %}
+{% block content %}
+<div>
+        <img src="/static/{{company}}.png" >
+</div>
+<div class = "wrapper">
+    <p>Nafn: {{ nafn }}</p>
+    <p>Fyrirtæki : {{ company }}</p>
+    <p>Verð á Bensíni: {{ bensin }}</p>
+    <p>Verð á Diesel: {{ diesel }}</p>
+    <a target="_none" href="https://www.google.com/maps/search/?api=1&query={{lat}},{{lon}}">Staðsetning(Google Maps)</a>
+</div>
+
+{% endblock %}
